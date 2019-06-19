@@ -19,10 +19,12 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@testing-library/react": "^8.0.1",
     "babel-jest": "^24.8.0",
     "babel-preset-gatsby": "^0.1.11",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
+    "jest-dom": "^3.5.0",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.8.6"
   },
