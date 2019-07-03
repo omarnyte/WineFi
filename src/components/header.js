@@ -1,4 +1,5 @@
 import { Link } from "gatsby"
+import NavBar from "./navBar"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -27,6 +28,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <NavBar />
     </div>
   </header>
 )
