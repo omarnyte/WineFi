@@ -3,32 +3,24 @@ import PropTypes from "prop-types"
 import { graphql, StaticQuery } from "gatsby"
 
 import "./layout.css"
+import directoryStyles from "../styles/directory.module.scss";
 
 export const PureDirectory = ({ data }) => (
-  <>
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `0px 1.0875rem 1.45rem`,
-        paddingTop: 0,
-      }}
-    >
-      <h2>Directory</h2>
-      <ul>
-        {data.allContentfulPlace.group.map(group => (
-          <li key={group.fieldValue}>
-            <h3>{group.fieldValue}</h3>
-            <ul>
-              {group.edges.map(edge => (
-                <li key={edge.node.id}>{edge.node.name}</li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </>
+  <div className={directoryStyles.directory}>
+    <h2>Directory</h2>
+    <ul className={directoryStyles.directoryItems}>
+      {data.allContentfulPlace.group.map(group => (
+        <li className={directoryStyles.cityLi} key={group.fieldValue}>
+          <h3>{group.fieldValue}</h3>
+          <ul>
+            {group.edges.map(edge => (
+              <li className={directoryStyles.placeLi} key={edge.node.id}>{edge.node.name}</li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  </div>
 )
 
 export default props => (
@@ -64,7 +56,7 @@ PureDirectory.propTypes = {
                 name: PropTypes.string
               }).isRequired
             }).isRequired
-          ).isRequired 
+          ).isRequired
         }).isRequired
       ).isRequired,
     }).isRequired,

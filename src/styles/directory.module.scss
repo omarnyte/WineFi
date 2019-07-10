@@ -1,0 +1,21 @@
+.city-li {
+  padding-bottom: 1px;
+  padding-top: 5px;
+  font-size: 30px;
+}
+
+.directory {
+  margin-bottom: 10px; 
+  padding-bottom: 10px; 
+  
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.place-li {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-size: 24px;
+}
