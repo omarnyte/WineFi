@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "title . nav-bar";
+
+  background-color: #AC3945;
+}
+
+.nav-bar {
+  grid-area: nav-bar;
+}
+
+.title {
+  grid-area: title;
+  align-self: center;
+
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.siteTitleLink {
+  color: white;
+  padding-left: 10%;
+  text-decoration: none;
+}
